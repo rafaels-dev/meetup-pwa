@@ -1,0 +1,29 @@
+{
+  "name": "meetup-pwa",
+  "homepage": "https://github.com/rcschettino/meetup-pwa",
+  "authors": [
+    "Rafael Schettino <rafael_tecnologia@outlook.com>"
+  ],
+  "description": "Progressive Web App para MeetUp Mobile Dev BH",
+  "main": "index.html",
+  "keywords": [
+    "pwa",
+    "progressive",
+    "webapp",
+    "mobile",
+    "offline"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.9",
+    "angular-route": "^1.5.7"
+  }
+}
