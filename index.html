@@ -16,30 +16,32 @@
         <md-toolbar>
             <div class="md-toolbar-tools">
                 <span>Mobile Dev BH</span>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Atualizar" ng-click="loadContent()">
+                  <md-icon>refresh</md-icon>
+                </md-button>
             </div>
         </md-toolbar>
     </header>
 
-    <md-content ng-view layout-padding flex=1 style="border: 1px solid red">
-    </md-content>
-
-    <div layout="row" class="message-board" layout-padding layout-align="center center">
-        <md-input-container md-no-float flex="1">
-            <input type="text" ng-model="teste" placeholder="Mensagem" />
-        </md-input-container>
-        <md-button class="md-primary md-icon-button">
-            <md-icon>send</md-icon>
-        </md-button>
+    <div layout="row" layout-sm="column" layout-align="space-around" ng-show="loading">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
     </div>
 
+    <md-content ng-view flex=1 ng-hide="loading">
+    </md-content>
+
     <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-uuid/uuid.min.js"></script>
     <script src="/bower_components/angular-route/angular-route.min.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="/bower_components/angular-material/angular-material.min.js"></script>
-    <script src="/app/routes.js"></script>
+
     <script src="/app/main.js"></script>
+    <script src="/app/services/links.js"></script>
+    <script src="/app/controllers/index.js"></script>
 </body>
 
 </html>

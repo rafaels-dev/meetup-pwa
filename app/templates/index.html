@@ -1,2 +1,9 @@
 <md-list>
+    <md-list-item class="md-offset md-2-line" ng-repeat="link in links" ng-click="openUrl(link.url)">
+        <div class="md-list-item-text">
+            <h3>{{link.title}}</h3>
+            <p>{{link.url}}</p>
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
 </md-list>

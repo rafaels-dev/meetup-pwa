@@ -24,6 +24,10 @@
   ],
   "dependencies": {
     "angular-material": "^1.0.9",
-    "angular-route": "^1.5.7"
+    "angular-route": "^1.5.7",
+    "angular-uuid": "^0.1.0"
+  },
+  "resolutions": {
+    "angular": "1.5.7"
   }
 }

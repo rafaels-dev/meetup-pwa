@@ -1,20 +1,25 @@
 (function(){
     'use strict';
-    angular.module('pwa', ['ngMaterial', 'ngRoute'])
-        .controller('IndexController', function($scope){
-            $scope.message = 'Hello World';
-        })
-        .config(function($routeProvider, $locationProvider, $mdThemingProvider){
 
-            $mdThemingProvider.theme('default')
-                .primaryPalette('indigo')
-                .accentPalette('amber');
+    function configureMaterialTheme($mdThemingProvider){
+      $mdThemingProvider.theme('default')
+          .primaryPalette('indigo')
+          .accentPalette('amber');
+    }
 
-            $routeProvider.when('/', {
-                templateUrl: 'app/templates/index.html',
-                controller: 'IndexController'
-            });
+    function createRoutes($routeProvider, $locationProvider){
+      $routeProvider.when('/', {
+          templateUrl: 'app/templates/index.html',
+          controller: 'IndexController'
+      });
 
-            $locationProvider.html5Mode(true);
-        });
+      $locationProvider.html5Mode(true);
+    }
+
+    function configureApp($routeProvider, $locationProvider, $mdThemingProvider){
+        configureMaterialTheme($mdThemingProvider);
+        createRoutes($routeProvider, $locationProvider);
+    };
+
+    angular.module('pwa', ['ngMaterial', 'ngRoute', 'uuid']).config(configureApp);
 })();
