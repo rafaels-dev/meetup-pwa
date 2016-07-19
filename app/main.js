@@ -19,7 +19,14 @@
     function configureApp($routeProvider, $locationProvider, $mdThemingProvider){
         configureMaterialTheme($mdThemingProvider);
         createRoutes($routeProvider, $locationProvider);
-    };
+    }
+
+    function registerServiceWorkers(){
+      if ('serviceWorker' in navigator){
+        navigator.serviceWorker.register('./sw-assets.js');
+      }
+    }
 
     angular.module('pwa', ['ngMaterial', 'ngRoute', 'uuid']).config(configureApp);
+    registerServiceWorkers();
 })();
