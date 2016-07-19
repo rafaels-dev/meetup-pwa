@@ -1,5 +1,12 @@
 {
   "hosting": {
-    "public": "./"
+    "public": "./",
+    "ignore":[
+      "firebase.json",
+      ".git",
+      "bower_components/material-design-icons/*",
+      "!bower_components/material-design-icons/iconfont",
+      "**/node_modules/**"
+    ]
   }
 }
