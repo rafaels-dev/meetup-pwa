@@ -6,6 +6,7 @@
   "start_url":"./?ref=homescreen",
   "display":"fullscreen",
   "lang":"pt-BR",
+  "gcm_sender_id":"975824879741",
   "icons":[
     {
       "src":"app/assets/icon16.png",

@@ -38,9 +38,24 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('message', function(event){
     console.log('message!', event);
-})
+});
 
 self.addEventListener('unhandledRejection', function(ev){
     console.log('Error!');
     console.log(ev);
-})
+});
+
+self.addEventListener('push', function(event){
+    console.log('Push message:', event);
+
+    event.waitUntil(
+        self.registration.showNotification('Push Notification', {
+            body: 'Olha que legal! Funciona mesmo!!!',
+            icon: "app/assets/icon96.png"
+        })
+    );
+});
+
+self.addEventListener('notificationclick', function(event){
+    event.notification.close();
+});

@@ -29,9 +29,20 @@
         createRoutes($routeProvider, $locationProvider);
         createDatabase($indexedDBProvider);
     }
+
     function registerServiceWorkers(){
       if ('serviceWorker' in navigator){
-        navigator.serviceWorker.register('./sw.js');
+        navigator.serviceWorker.register('./sw.js').then(function(){
+          return navigator.serviceWorker.ready;
+        }).then(function(reg){
+          reg.pushManager.subscribe({ userVisibleOnly: true }).then(function(sub){
+            console.log('Registered to GCM:', sub);
+            var registrationId = sub.endpoint.split('/').pop();
+            firebase.database().ref(registrationId).set({
+              endpoint: sub.endpoint
+            });
+          });
+        });
       }
     }
 

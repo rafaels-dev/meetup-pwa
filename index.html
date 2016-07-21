@@ -47,6 +47,20 @@
     <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="/bower_components/angular-material/angular-material.min.js"></script>
 
+    
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB8WuTqgMcZGjKPH8fr9-c1xk2TVKOQrSM",
+        authDomain: "mobiledevbh-push.firebaseapp.com",
+        databaseURL: "https://mobiledevbh-push.firebaseio.com",
+        storageBucket: "mobiledevbh-push.appspot.com",
+    };
+    firebase.initializeApp(config);
+    </script>
+        
+
     <script src="/app/main.js"></script>
     <script src="/app/services/links.js"></script>
     <script src="/app/controllers/index.js"></script>
