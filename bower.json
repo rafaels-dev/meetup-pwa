@@ -26,7 +26,8 @@
     "angular-material": "^1.0.9",
     "angular-route": "^1.5.7",
     "angular-uuid": "^0.1.0",
-    "material-design-icons": "^2.2.3"
+    "material-design-icons": "^2.2.3",
+    "angular-indexedDB": "angularjs-indexedDB#*"
   },
   "resolutions": {
     "angular": "1.5.7"

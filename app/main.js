@@ -16,17 +16,25 @@
       $locationProvider.html5Mode(true);
     }
 
-    function configureApp($routeProvider, $locationProvider, $mdThemingProvider){
-        configureMaterialTheme($mdThemingProvider);
-        createRoutes($routeProvider, $locationProvider);
+    function createDatabase(db){
+      db.connection('meetup-pwa')
+        .upgradeDatabase(1, function(event, db, tx){
+          var objStore = db.createObjectStore('links', { keyPath: 'id' });
+          objStore.createIndex('id_idx','id', {unique: true});
+        });
     }
 
+    function configureApp($routeProvider, $locationProvider, $mdThemingProvider, $indexedDBProvider){
+        configureMaterialTheme($mdThemingProvider);
+        createRoutes($routeProvider, $locationProvider);
+        createDatabase($indexedDBProvider);
+    }
     function registerServiceWorkers(){
       if ('serviceWorker' in navigator){
-        navigator.serviceWorker.register('./sw-assets.js');
+        navigator.serviceWorker.register('./sw.js');
       }
     }
 
-    angular.module('pwa', ['ngMaterial', 'ngRoute', 'uuid']).config(configureApp);
+    angular.module('pwa', ['ngMaterial', 'ngRoute', 'uuid','xc.indexedDB']).config(configureApp);
     registerServiceWorkers();
 })();

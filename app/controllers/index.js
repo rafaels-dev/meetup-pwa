@@ -9,8 +9,13 @@
         $rootScope.loading = true;
         linksService.getLinks().then(function(links){
           $scope.links = links;
+        }).finally(function(){
           $rootScope.loading = false;
         });
+
+        linksService.linksUpdated = function(links){
+          $scope.links = links;
+        };
       }
       $rootScope.loadContent = loadContent;
       loadContent();
