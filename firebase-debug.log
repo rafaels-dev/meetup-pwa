@@ -3,20 +3,94 @@
 [debug] CLI Version:  3.0.4
 [debug] Platform:     linux
 [debug] Node Version: v4.4.3
-[debug] Time:         Wed Jul 20 2016 23:49:43 GMT-0300 (BRT)
+[debug] Time:         Thu Jul 21 2016 00:21:34 GMT-0300 (BRT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobiledevbh-pwa-offline 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobiledevbh-pwa-offline/tokens 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'mobiledevbh-pwa-offline'...
+[info] 
+[info] i  deploying hosting
+[info] ✔  database: rules ready to deploy.
+[info] i  hosting: preparing ./ directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/mobiledevbh-pwa-offline/uploads/-KNATFktfNhaiRqTdOSx?fileCount=90450&message= 
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  hosting: 90450 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/mobiledevbh-pwa-offline/releases
+[error] 
+[error] Error: An unknown error occurred. Please contact support.
+[debug] Error Context: {
+  "body": {
+    "error": {
+      "code": "UNKNOWN_ERROR",
+      "message": "An unknown error occurred. Please contact support."
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": "UNKNOWN_ERROR",
+        "message": "An unknown error occurred. Please contact support."
+      }
+    },
+    "headers": {
+      "server": "nginx",
+      "date": "Thu, 21 Jul 2016 03:33:40 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "97",
+      "connection": "close",
+      "x-content-type-options": "nosniff"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "deploy.firebase.com",
+        "port": 443,
+        "hostname": "deploy.firebase.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1/projects/mobiledevbh-pwa-offline/releases",
+        "path": "/v1/projects/mobiledevbh-pwa-offline/releases",
+        "href": "https://deploy.firebase.com/v1/projects/mobiledevbh-pwa-offline/releases"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /home/rafael/.nvm/versions/node/v4.4.3/bin/node /home/rafael/.nvm/versions/node/v4.4.3/bin/firebase deploy
+[debug] CLI Version:  3.0.4
+[debug] Platform:     linux
+[debug] Node Version: v4.4.3
+[debug] Time:         Thu Jul 21 2016 00:40:12 GMT-0300 (BRT)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
 [debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
 [debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
 [debug] <<< HTTP RESPONSE 200
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobiledevbh-offline 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobiledevbh-pwa-offline 
 [debug] <<< HTTP RESPONSE 200
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobiledevbh-offline/tokens 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobiledevbh-pwa-offline/tokens 
 [debug] <<< HTTP RESPONSE 200
 [info] 
-[info] === Deploying to 'mobiledevbh-offline'...
+[info] === Deploying to 'mobiledevbh-pwa-offline'...
 [info] 
 [info] i  deploying hosting
 [info] ✔  database: rules ready to deploy.
 [info] i  hosting: preparing ./ directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/mobiledevbh-pwa-offline/uploads/-KNAXWxQL1G6cGN6qRT-?fileCount=90450&message= 
+[debug] Error: read ECONNRESET
+    at exports._errnoException (util.js:870:11)
+    at TLSWrap.onread (net.js:552:26)
+[error] 
+[error] Error: Server Error. Please try again in a few minutes.
