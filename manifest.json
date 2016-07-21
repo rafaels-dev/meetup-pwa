@@ -3,7 +3,7 @@
   "name":"Mobile Dev BH",
   "short_name":"PWA-MDevBH",
   "background_color":"white",
-  "start_url":"./?ref=homescreen",
+  "start_url":"./",
   "display":"fullscreen",
   "lang":"pt-BR",
   "gcm_sender_id":"975824879741",
