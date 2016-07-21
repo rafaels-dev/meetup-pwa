@@ -1,7 +1,7 @@
-var assetsCache = 'meetup-pwa-assets-v1.0.1';
-var dataCache = 'meetup-pwa-data-v1.0.1';
+var assetsCache = 'meetup-pwa-assets-v1.0.2';
 
 var staticFiles = [
+    /\/$/,
     /\/assets\/icon\d{2,3}\.png/gi,
     /\/app\/(.*)\/(.*)\.js/gi,
     /\/bower_components\/(.*)\/(.*)\.min\.(js|css)/gi,
