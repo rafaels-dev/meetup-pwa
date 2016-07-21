@@ -3,30 +3,18 @@
 [debug] CLI Version:  3.0.4
 [debug] Platform:     win32
 [debug] Node Version: v4.1.2
-[debug] Time:         Tue Jul 19 2016 01:10:06 GMT-0300 (E. South America Standard Time)
+[debug] Time:         Wed Jul 20 2016 23:30:21 GMT-0300 (E. South America Standard Time)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobiledevbh-appshell 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobiledevbh-offline 
 [debug] <<< HTTP RESPONSE 200
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobiledevbh-appshell/tokens 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobiledevbh-offline/tokens 
 [debug] <<< HTTP RESPONSE 200
 [info] 
-[info] === Deploying to 'mobiledevbh-appshell'...
+[info] === Deploying to 'mobiledevbh-offline'...
 [info] 
 [info] i  deploying hosting
 [info] +  database: rules ready to deploy.
 [info] i  hosting: preparing ./ directory for upload...
-[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/mobiledevbh-appshell/uploads/-KN0MHmPp2pWWUiSFkqr?fileCount=604&message= 
-[debug] <<< HTTP RESPONSE 200
-[info] +  hosting: 604 files uploaded successfully
-[info] i  starting release process (may take several minutes)...
-[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/mobiledevbh-appshell/releases
-[debug] <<< HTTP RESPONSE 200
-[info] 
-[info] +  Deploy complete!
-[info] 
-[info] Hosting Site: https://mobiledevbh-appshell.firebaseapp.com
-[info] Dashboard: https://console.firebase.google.com/project/mobiledevbh-appshell/overview
-[info] 
-[info] Visit the URL above or run firebase open
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/mobiledevbh-offline/uploads/-KNAIePfKbPgxIpRajBf?fileCount=93252&message= 
